@@ -4,9 +4,9 @@
 * 개발 환경 : ArduinoIDE
 * 개발 언어 : C++
 * 개발 목표  
-  * The vehicle uses two DC motors to accurately reach its destination.
-  * Raises and lowers objects safely detected by two servo motors.
-  * The sensor detects the color of the object and moves along the set path according to the color.
+  * 차량의 센서는 물체를 감지하고 물체의 색상에 따라 이동 경로를 파악합니다.
+  * 차량의 서보 모터는 감지된 물체를 들어 올리거나 내려놓습니다.
+  * 차량의 DC 모터를 통해 목적지까지 이동합니다.
 
 <br/> <br/>
 
@@ -30,9 +30,9 @@
 <br/> <br/>
 
 ## Code Review
-* Set the s0 pin to HIGH and the s1 pin to LOW to output the frequency at 20% size.
-* The s2, s3 pins are combined to receive frequency values of red, green, and blue.
-* Get the value of the frequency through the pulseIn function and get the value in the range 0-255.
+* 주파수를 20% 크기로 출력하려면 s0 핀을 HIGH로, s1 핀을 LOW로 설정합니다.
+* s2, s3 핀은 빨간색, 녹색 및 파란색의 주파수 값을 수신하기 위해 결합됩니다.
+* pulseIn 함수를 통해 주파수 값을 얻고 0-255 범위의 값을 얻습니다.
 
 ```C
   digitalWrite(s0,HIGH);  
@@ -46,22 +46,24 @@
   red_color = constrain(red_color,0,255);
 ```
 
-* Two servo motors for vertical and horizontal control are composed of pins 12 and 13.
-* Servo 12 raises and lowers objects vertically by setting 75 and 50 degrees.
-* Servo 13 holds and places objects horizontally with 75 degree and 110 degree settings.
+* 수직 및 수평 제어를 위한 두 개의 서보 모터는 핀 12 및 13으로 구성됩니다.
+* 서보 12는 75도와 50도를 설정하여 물체를 수직으로 올리고 내린다.
+* 서보 13은 75도 및 110도 설정으로 물체를 수평으로 고정하고 배치합니다.
+
+<br/>
 
 ```C
-  tiltservo.attach(12);  
-  gripservo.attach(13);
+  TiltServo.attach(12);  
+  GripServo.attach(13);
 
-  gripservo.write(75); 
+  GripServo.write(75); 
   delay(200);
-  tiltservo.write(75);
+  TiltServo.write(75);
   delay(100);
   
-  tiltservo.write(50);  
+  TiltServo.write(50);  
   delay(100);
-  gripservo.write(110); 
+  GripServo.write(110); 
   delay(200);
 ```
 
@@ -76,6 +78,6 @@
 <br/> <br/>
 
 ## Realization
-* Using the datasheet and open source of the hardware used in the project, I was able to feel the joy of operating the hardware myself.
-* It was very helpful to design and proceed the project directly rather than proceeding with the Arduino practice according to the lecture.
-* By communicating with the four team members, I was able to complete the targeted results, and it was an opportunity to take responsibility for the roles I was assigned.
+* 프로젝트에 사용된 하드웨어의 데이터시트와 오픈소스를 이용해 하드웨어를 직접 조작하는 즐거움을 느낄 수 있었다.
+* 강의에 따라 아두이노 실습을 진행하는 것보다 직접 프로젝트를 설계하고 진행하는 것이 큰 도움이 되었다.
+* 팀원 4명과 소통하면서 목표한 결과를 완성할 수 있었고, 맡은 역할을 책임지는 계기가 됐다.
