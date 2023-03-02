@@ -1,9 +1,9 @@
 # Carrying Vehicle System
-* Period : 2021.04-2021.06 (3 months)
-* Personnel : 5 person
-* Development environment : ArduinoIDE
-* Development language : C++
-* Development goals  
+* 개발기간 : 2021.04-2021.06 
+* 개발인원 : 5 person
+* 개발환경 : ArduinoIDE
+* 개발언어 : C++
+* 개발목표  
   * The vehicle uses two DC motors to accurately reach its destination.
   * Raises and lowers objects safely detected by two servo motors.
   * The sensor detects the color of the object and moves along the set path according to the color.
