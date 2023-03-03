@@ -34,6 +34,7 @@
 * S2, S3 상태에 따라을 선택합니다. (S2 : LOW S3: HIGH -> BULE, S2 S3 : HIGH -> GREEN)  
 * pulseIn, map, constrain 함수를 통해 순수 주파수를 0-255 범위의 값으로 반환합니다.
 |S0|S1|출력(주파수 스케일링)|
+|---|---|---|
 |L |L |Power down|  
 |L |H |2%| 
 |H |L |20%| 
