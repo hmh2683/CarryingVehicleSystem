@@ -31,19 +31,9 @@
 
 ## Code Review
 * RGB(0~255)를 추출하기 위해 S0 : HIGH, S1 : LOW 로 설정하여 주파수를 20% 크기로 출력합니다. (0%, 2%, 20%, 100%)
-* S2, S3 상태에 따라을 선택합니다. (S2 : LOW S3: HIGH -> BULE, S2 S3 : HIGH -> GREEN)  
+* S2, S3 출력에 따라을 RGB 색상의 주파수를 얻습니다. (S2 : LOW S3: HIGH -> BULE, S2 S3 : HIGH -> GREEN)  
 * pulseIn, map, constrain 함수를 통해 순수 주파수를 0-255 범위의 값으로 반환합니다.
-|S0|S1|출력(주파수 스케일링)|
-|---|---|---|
-|L |L |Power down|  
-|L |H |2%| 
-|H |L |20%| 
-|H |H |100&| 
-|제목|내용|설명|
-|------|---|---|
-|테스트1|테스트2|테스트3|
-|테스트1|테스트2|테스트3|
-|테스트1|테스트2|테스트3|
+
 ```C
   digitalWrite(s0,HIGH);  
   digitalWrite(s1,LOW);
