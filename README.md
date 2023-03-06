@@ -30,9 +30,9 @@
 <br/> <br/>
 
 ## Code Review
-* RGB(0~255)를 추출하기 위해 S0 : HIGH, S1 : LOW 로 설정하여 주파수를 20% 크기로 출력합니다. (0%, 2%, 20%, 100%)
-* S2, S3 상태에 따라 RGB 색상의 주파수를 출력합니다. (S2 : LOW S3: HIGH -> BULE, S2 S3 : HIGH -> GREEN)  
-* pulseIn, map, constrain 함수를 통해 순수 주파수를 0~255 범위로 반환합니다.
+* RGB(0~255)를 추출하기 위해 S0 HIGH, S1 LOW 로 설정하여 주파수를 20% 크기로 출력합니다. (0%, 2%, 20%, 100%)
+* S2, S3 상태에 따라 RGB 색상의 주파수를 출력합니다. (S2:LOW S3:HIGH -> BULE, S2 S3:HIGH -> GREEN)  
+* pulseIn, map, constrain 함수를 통해 주파수를 0~255 값의 범위로 반환합니다.
 
 ```C
   digitalWrite(s0,HIGH);  
