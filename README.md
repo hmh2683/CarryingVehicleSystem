@@ -12,7 +12,7 @@
 
 ## Microcontroller
 <a href="#"><img src="https://github.com/hmh2683/CarryingVehicleSystem/blob/main/image/mcu.png" width="400px" height="300px"></a> 
-* Board : Arduino Uno (M3)
+* Board : Arduino Uno(M3)
 * Core : AVR ATMega328 
 * Clock Speed : 16MHz
 * Digital I/O Pins : 14 (of which 6 provide PWM output)
@@ -22,9 +22,9 @@
 
 ## Pinout Configuration
 * (DCMotor, OUTPUT) EN1:8, EN2:9, EN3:10, EN4:11
-* (ServoMotor, OUTPUT) PWM(T):12, PWM(G):13 
+* (ServoMotor, OUTPUT) PWM(TS):12, PWM(GS):13 
 * (ColorSensor, OUTPUT) S0:A0, S1:A1, S2:A2, S3:A3
-* (ColorSensor, INPUT) OUT:D2
+* (ColorSensor, INPUT) OUT:2
 
 <br/> <br/>
 
